@@ -73,16 +73,16 @@ public class TwoPointsTest {
         TwoPoints twoPoints = new TwoPoints();
         twoPoints.setPoint(0, 2, 2);
         twoPoints.setPoint(1, 3 ,3);
-        int distance = twoPoints.distance();
-        assertEquals(1, distance);
+        double distance = twoPoints.distance();
+        assertEquals(Math.sqrt(2), distance, 0.0);
     }
 
     @Test
     public void slope() {
         TwoPoints twoPoints = new TwoPoints();
         twoPoints.setPoint(0 , 2, 2);
-        twoPoints.setPoint(1, 3, 3);
+        twoPoints.setPoint(1, 3, 5);
         double slope = twoPoints.slope();
-        assertEquals(1, slope);
+        assertEquals(slope, 3.0, 0.0);
     }
 }
